@@ -1,0 +1,48 @@
+
+<p>
+  <strong>Provider:</strong>
+  <%= @reward.provider.name if @reward.provider.name.present? %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reward.name %>
+</p>
+
+<p>
+  <strong>Qr code:</strong>
+  <%= @reward.qr_code %>
+</p>
+
+<p>
+  <strong>Redemption code:</strong>
+  <%= @reward.redemption_code %>
+</p>
+
+<p>
+  <strong>Datecreated:</strong>
+  <%= @reward.datecreated %>
+</p>
+
+<p>
+  <strong>Expiry:</strong>
+  <%= @reward.expiry %>
+</p>
+
+<p>
+  <strong>Enabled:</strong>
+  <%= @reward.enabled %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @reward.points %>
+</p>
+
+<p>
+  <strong>Advertisement:</strong>
+  <%= @reward.advertisement %>
+</p>
+
+<%= link_to 'Edit', edit_reward_path(@reward) %> |
+<%= link_to 'Back', rewards_path %>

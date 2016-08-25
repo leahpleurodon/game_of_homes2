@@ -1,0 +1,2 @@
+json.extract! reward, :id, :provider_id, :name, :qr_code, :redemption_code, :datecreated, :expiry, :enabled, :points, :advertisement, :created_at, :updated_at
+json.url reward_url(reward, format: :json)

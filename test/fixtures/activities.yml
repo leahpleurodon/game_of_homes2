@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  descr: MyText
+  tier: 1
+  enabled: false
+  expity: 2016-08-25
+  points: 1
+
+two:
+  name: MyString
+  location: MyString
+  descr: MyText
+  tier: 1
+  enabled: false
+  expity: 2016-08-25
+  points: 1

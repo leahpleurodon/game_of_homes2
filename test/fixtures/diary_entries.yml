@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  entry_date: 2016-08-25 16:50:52
+  genfeelings: MyString
+  entry: MyText
+  enabled: false
+
+two:
+  user_id: 
+  entry_date: 2016-08-25 16:50:52
+  genfeelings: MyString
+  entry: MyText
+  enabled: false

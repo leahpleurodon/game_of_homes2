@@ -1,0 +1,53 @@
+<%= form_for(@reward) do |f| %>
+  <% if @reward.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reward.errors.count, "error") %> prohibited this reward from being saved:</h2>
+
+      <ul>
+      <% @reward.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+
+    <%= collection_select(:reward, :provider_id, Provider.all, :id, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :qr_code %><br>
+    <%= f.text_field :qr_code %>
+  </div>
+  <div class="field">
+    <%= f.label :redemption_code %><br>
+    <%= f.text_field :redemption_code %>
+  </div>
+  <div class="field">
+    <%= f.label :datecreated %><br>
+    <%= f.date_select :datecreated %>
+  </div>
+  <div class="field">
+    <%= f.label :expiry %><br>
+    <%= f.date_select :expiry %>
+  </div>
+  <div class="field">
+    <%= f.label :enabled %><br>
+    <%= f.check_box :enabled %>
+  </div>
+  <div class="field">
+    <%= f.label :points %><br>
+    <%= f.number_field :points %>
+  </div>
+  <div class="field">
+    <%= f.label :advertisement %><br>
+    <%= f.check_box :advertisement %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

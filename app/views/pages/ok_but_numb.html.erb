@@ -1,0 +1,40 @@
+You're feeling ok,
+
+Let's do something <br />
+<p>
+  <div id="insp">Inspiring?</div> <br />
+  <div id="fun">Fun?</div>
+</p>
+<div class = "none" id ="inspdiv">
+    <ul class="nav nav-pills">
+  <% @inspiringactivities.each do |activity| %>
+
+      <li role="presentation"><a href="">
+        <h2> <%= activity.name %></h2>
+        <%= activity.location %>
+        <br />
+        <%= activity.descr %>
+      </a></li>
+
+  <% end %>
+</ul>
+</div>
+
+<div class = "none" id ="fundiv">
+
+
+  <ul class="nav nav-pills">
+  <% @funactivities.each do |activity| %>
+
+      <li role="presentation"><a href="#">
+        <h2> <%= activity.name %></h2>
+        <%= activity.location %>
+        <br />
+        <%= activity.descr %>
+      </a></li>
+
+  <% end %>
+</ul>
+</tbody>
+</table>
+</div>

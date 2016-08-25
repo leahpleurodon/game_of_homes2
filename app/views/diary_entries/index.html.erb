@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Diary Entries</h1>
+
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>Entry date</th>
+      <th>Genfeelings</th>
+      <th>Entry</th>
+      <th>Enabled</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diary_entries.each do |diary_entry| %>
+      <tr>
+        <td><%= diary_entry.entry_date.strftime("%m/%d/%Y %I:%M %P") %></td>
+        <td><%= diary_entry.genfeelings %></td>
+        <td><%= diary_entry.entry %></td>
+        <td><%= diary_entry.enabled %></td>
+        <td><%= link_to 'Show', diary_entry %></td>
+        <td><%= link_to 'Edit', edit_diary_entry_path(diary_entry) %></td>
+        <td><%= link_to 'Destroy', diary_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diary entry', new_diary_entry_path %>
